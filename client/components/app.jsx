@@ -77,27 +77,33 @@ const App = () => {
   }
 
   return (
-    <div className='container'>
-      <h1>Flash Cards</h1>
-      {/* <button className='button' onClick={() => setFlashCards()}>start</button>
-      <button className='button' onClick={() => reset()}>reset</button> */}
-      <label >Pick the Category</label>
-        <select type="text" value={category} required onChange={e => setCategory(e.target.value)}>
-        <option></option>
-        {categories.map((category) => {
-                  //  console.log(category);
-                   return (<option value={category}>{category}</option>)
-                 })
-                 }
-          {/* <option></option>
-          <option>ME</option>
-          <option>CS</option>
-          <option>Software Engineering</option> */}
-        </select>
-        <button type="submit" value="Submit" onClick={e => onSubmit(e)}>Enter</button>
-      <Form setCategories={setCategories} setFlashCards={setFlashCards} />
-      {/* <h1>App.js is connected and working!</h1> */}
-      <Flashcardlist flashcards={flashcards}/>
+    <div className='wrapper'>
+      {/* <div class="row"> */}
+        <div class="item-a">
+          <h1>Flash Cards</h1>
+        </div>
+        {/* <button className='button' onClick={() => setFlashCards()}>start</button>
+        <button className='button' onClick={() => reset()}>reset</button> */}
+        <div class="item-b">
+          <label >Pick the Category</label>
+          <select type="text" value={category} required onChange={e => setCategory(e.target.value)}>
+            <option></option>
+            {categories.map((category) => {
+                      //  console.log(category);
+                      return (<option value={category}>{category}</option>)
+                    })
+                    }
+              {/* <option></option>
+              <option>ME</option>
+              <option>CS</option>
+              <option>Software Engineering</option> */}
+          </select>
+          <button type="submit" value="Submit" onClick={e => onSubmit(e)}>Enter</button>
+        </div>
+        <Form setCategories={setCategories} setFlashCards={setFlashCards} />
+        {/* <h1>App.js is connected and working!</h1> */}
+        <Flashcardlist flashcards={flashcards}/>
+      {/* </div> */}
     </div>
   )
 }

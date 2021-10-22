@@ -54,7 +54,8 @@ const Form = ( { setCategories, setFlashCards } ) => {
 
 
   return (
-    <div className="right-column">
+    // <div className="right-column">
+    <div class="sidebar">
       <form>
         <h2>Add Card</h2>
         <label >Question</label>
@@ -71,7 +72,7 @@ const Form = ( { setCategories, setFlashCards } ) => {
         <br></br>
         <input className="box" type="text" value={category} required onChange={e => setCategory(e.target.value)}></input>
         <br></br>
-        <button className="submit" type="submit" value="Submit" onClick={e => onSubmit(e)}>Submit</button>
+        <button className="submit btn btn-primary" type="submit" value="Submit" onClick={e => onSubmit(e)}>Submit</button>
       </form>
 
     </div>
